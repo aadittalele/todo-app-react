@@ -6,7 +6,7 @@ import deleteIcon from "./images/delete-icon.png"
 //Idea for resizing inputs: have a O(1) dictionary with all the characters corresponding with it's pixel value. When a user types in the character, it will search through dictionary and add the pixel value of the character to the edit-input.
 
 function App() {
-  const [todos, setTodos] = useState(JSON.parse(localStorage.getItem("Todos") !== null ? localStorage.getItem("Todos") : []));
+  const [todos, setTodos] = useState(localStorage.getItem("Todos") !== null ? JSON.parse(localStorage.getItem("Todos")) : []);
   const [todoName, setTodoName] = useState("");
   const [editName, setEditName] = useState("");
 
