@@ -1,38 +1,137 @@
+html, body {
+  overflow-x: hidden;
+  background: #202225;
+  color: white;
+}
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.add-button {
+  width: 80px;
+  height: 40px;
+  margin-left: 20px;
+  color: white;
+  background: rgb(2, 155, 2);
+  border: solid 4px rgb(1, 129, 1);
+  border-radius: 10px;
+}
+
+.add-button:hover {
+  cursor: pointer;
+  background: rgb(2, 136, 2);
+}
+
+.todo-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.todo {
+  border-radius: 8px;
+  background: #2f3136;
+  padding: 10px;
+  margin: 20px;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  overflow-wrap: anywhere;
+}
+
+.add-todo-input {
+  outline: none;
+  width: 300px;
+  height: 40px;
+  text-align: center;
+  border-radius: 10px;
+  border: 3px solid rgb(56, 58, 59);
+  background: #2f3136;
+  color: white;
+  font: larger;
+  margin-left: 20px;
+}
+
+.add-todo-input::placeholder {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.delete-button {
+  padding: 5px;
+  width: 26px;
+  height: 30px;
+  text-align: center;
+  outline: none;
+  background: #2f3136;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.delete-click {
+  margin: 10px 0px 10px 5px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: 3px solid #f14668;
+}
+
+.delete-click:hover {
+  border: 3px solid #d63253;
+  cursor: pointer;
+}
+
+.edit-button {
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  outline: none;
+  background: #2f3136;
+}
+
+.edit-click {
+  margin: 10px 5px 10px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: 3px solid #4682f1;
+}
+
+.edit-click:hover {
+  border: 3px solid #3471e2;
+  cursor: pointer;
+}
+
+.todo-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.todo-name {
+  outline: none;
+}
+
+.too-long-error {
+  color: rgb(241, 70, 104);
+  display: flex;
+  align-items: flex-start;
+  margin: 0px;
+  font-size: smaller;
+}
+
+@media (max-width: 700px) {
+  .todo-form {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .add-button {
+    margin-left: 0px;
+    margin-top: 20px;
   }
 }
